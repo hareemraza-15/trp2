@@ -1,0 +1,28 @@
+.SideColLeft {
+  padding-left: 150px;
+  margin-right: 25px;
+  font-size: 24px;
+}
+
+.SideRow {
+  padding-top: 100px;
+  margin-top: 30px;
+}
+
+.SideColRight {
+  padding-right: 80px;
+  margin-right: 25px;
+  font-size: 24px;
+}
+
+.SideColLeftImage {
+  padding-left: 150px;
+  margin-right: 25px;
+}
+
+.SideColRightImage {
+  padding-left: 120px;
+  margin-right: 0px;
+  margin-left: 30px;
+  padding-right: 0px;
+}

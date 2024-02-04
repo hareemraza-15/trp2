@@ -1,0 +1,229 @@
+.product-details .container-fluid h5 {
+    font-family: "Neue Helvetica", Helvetica, Arial, sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.product-details .container-fluid p {
+    font-family: "Neue Helvetica", Helvetica, Arial, sans-serif;
+    text-transform: capitalize;
+    margin-bottom: 0.5rem;
+    font-size: 14px;
+}
+
+@media only screen and (min-width: 768px) {
+    .product-details .container-fluid .row .detail-products {
+        overflow-y: auto !important;
+        max-height: 500px !important;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .product-details .container-fluid .row .c-2 .b-img {
+        height: 320px !important;
+    }
+
+    .product-details .container-fluid .row .main-div {
+        height: 350px !important;
+    }
+}
+
+@media only screen and (max-width: 280px) {
+    .product-details .container-fluid .row .c-2 .b-img {
+        height: 220px !important;
+    }
+
+    .product-details .container-fluid .row .main-div {
+        height: 260px !important;
+    }
+}
+
+/* @media (min-width: 576px) { 
+    
+}
+@media (min-width: 576px) { 
+    
+} */
+
+
+#container .flexslider {
+    display: flex;
+    flex-direction: row-reverse;
+
+}
+
+#container ol {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#container ol li {
+    width: 75px;
+    height: 110px !important;
+    margin-top: 30px;
+}
+
+#container ol li img {
+    object-fit: contain;
+    width: 100%;
+    height: 100% !important;
+
+}
+
+#container h1 {
+    font-weight: 700;
+}
+
+#container h3 {
+    font-weight: none !important;
+}
+
+#container #row img {
+    width: 95%;
+    object-fit: contain;
+    transition: transform 0.3s ease-in-out;
+}
+
+#container #row div:hover img {
+    transform: scale(1.3);
+    border: 2px solid black;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.9);
+}
+
+.row2 div {
+    border: 2px solid black;
+    margin: 6px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding-left: 4.5px;
+}
+
+.row2 div:active, .row2 div:hover {
+    background-color: black;
+    color: white;
+}
+
+.variant-options {
+    display: flex;
+    gap: 10px;
+    flex-direction: row-reverse;
+    height: 624px;
+}
+
+.variant {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+.variant img {
+    width: 75px;
+    height: 100%;
+    object-fit: contain;
+}
+
+.image-display {
+    margin-top: 20px;
+    /* background-image: url(assets/img/1.jpg); */
+    width: 100%;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#container .image-display img {
+    width: 100%;
+    height: 600px;
+    object-fit: contain;
+    display: block;
+
+}
+
+.variant1 {
+    display: flex;
+    flex-direction: row !important;
+}
+
+.button {
+    width: 90%;
+    height: 60px;
+    background-color: white;
+    align-items: center;
+}
+
+.button a {
+    text-decoration: none;
+    color: black;
+    font-weight: 900;
+}
+
+.button2 {
+    width: 90%;
+    height: 60px;
+    background-color: rgb(0, 0, 0);
+    align-items: center;
+}
+
+.button2 a {
+    text-decoration: none;
+    color: white;
+    font-weight: 900;
+}
+
+.button svg {
+    display: none !important;
+}
+
+.button:hover {
+    width: 100%;
+}
+
+.button:hover.button a>svg {
+    display: block !important;
+}
+
+#myTabContent li {
+    padding-top: 10px;
+    padding-left: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.shade:hover {
+    opacity: 0.6;
+}
+
+#container-last>.row>div {
+    padding-top: 40px;
+}
+
+/* Styles for the modal container */
+.modal-container {
+    position: fixed;
+    top: 0;
+    /* right: -300px;  
+            width: 300px; */
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease;
+}
+
+/* Styles for the modal content */
+.modal-content {
+    padding: 20px;
+}
+
+/* Button to open the modal */
+.open-modal-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}

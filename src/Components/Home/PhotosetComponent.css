@@ -1,0 +1,69 @@
+body {
+    font-family: sans-serif;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+}
+ 
+  
+.ps-container{
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  width: 100wv;
+  height: 100vh}
+
+.ps-photoset{
+  width: 60%;
+  max-width: 400px;
+  position: relative;
+  margin: -80px auto 0;
+  aspect-ratio: 10 / 10}
+
+.ps-photoset:hover .ps-photo
+ { transform: rotate(0deg)}
+  
+.ps-photoset:hover .ps-photo:nth-child(1)
+ { left: 15vw;
+  top: 15vw}
+.ps-photoset:hover .ps-photo:nth-child(2)
+ { left: -15vw;
+  top: 5vw}
+.ps-photoset:hover .ps-photo:nth-child(3)
+  {left: 5vw;
+  top: -10vw}
+  
+.ps-photo
+ { width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 300ms all ease}
+  
+.ps-photo:nth-child(1)
+  {transform: rotate(4deg)}
+.ps-photo:nth-child(2)
+ { transform: rotate(3deg)}
+.ps-photo:nth-child(3)
+ { transform: rotate(-3deg)}
+
+.ps-controls
+  {position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 100wv;
+  user-select: none;
+  z-index: 999;
+  background: rgba(255,255,255,0.67);
+  border-radius: 1px}
+
+.ps-controls .block
+ { 
+    margin: 10px;
+  display: inline-block
+}
+.ps-controls .option-label
+ { padding: 12px 10px 10px 0}
+.ps-controls .option-label:hover
+{  cursor: pointer}
+  
