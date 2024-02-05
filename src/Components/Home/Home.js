@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import { Row, Col, Container } from 'react-bootstrap';
 import { gql, useQuery } from '@apollo/client';
 import { useNavigate, Link } from 'react-router-dom';
@@ -23,21 +23,16 @@ const GET_ALL_GALLERY = gql`
 
 function Home() {
 
-  const videoRef = useRef(null);
-
-  useEffect(() => {
-    // Wait for a brief moment and then attempt to autoplay
-    const timeoutId = setTimeout(() => {
-      if (videoRef.current) {
-        videoRef.current.play().catch(error => {
-          // Autoplay failed, handle the error
-          console.error('Autoplay failed:', error);
-        });
-      }
-    }, 100);
-
-    return () => clearTimeout(timeoutId); // Cleanup on component unmount
-  }, []);
+  const video = document.getElementById('trp'); 
+  // Wait for a brief moment and then attempt to autoplay
+setTimeout(() => {
+  if (video) {
+    video.play().catch(error => {
+      // Autoplay failed, handle the error
+      console.error('Autoplay failed:', error);
+    });
+  }
+}, 100); // Adjust the delay as needed
   
 
   const [hoverImage, setHoverImage] = useState(null);
@@ -168,7 +163,7 @@ You can contact us here for any suggestion or query!`}
           }}
         >
           <video
-      ref={videoRef}
+      id = 'trp'
       playsInline
       loop
       muted
