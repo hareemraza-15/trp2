@@ -23,17 +23,21 @@ const GET_ALL_GALLERY = gql`
 
 function Home() {
 
-  const video = ("trp") // Replace 'yourVideoId' with the actual ID of your video element
+  const videoRef = useRef(null);
 
-  // Wait for a brief moment and then attempt to autoplay
-  setTimeout(() => {
-    if (video) {
-      video.play().catch(error => {
-        // Autoplay failed, handle the error
-        console.error('Autoplay failed:', error);
-      });
-    }
-  }, 1000); // Adjust the delay as needed
+  useEffect(() => {
+    // Wait for a brief moment and then attempt to autoplay
+    const timeoutId = setTimeout(() => {
+      if (videoRef.current) {
+        videoRef.current.play().catch(error => {
+          // Autoplay failed, handle the error
+          console.error('Autoplay failed:', error);
+        });
+      }
+    }, 100);
+
+    return () => clearTimeout(timeoutId); // Cleanup on component unmount
+  }, []);
   
 
   const [hoverImage, setHoverImage] = useState(null);
@@ -164,23 +168,23 @@ You can contact us here for any suggestion or query!`}
           }}
         >
           <video
-          id= {video}
-            playsInline
-            loop
-            muted
-            controls={false}
-            width="100%"
-            height="100%"
-            style={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              background:'transparent'
-            }}
-            data-wf-ignore="true" data-object-fit="cover"
-            >
-            <source src="/trpbanner.mp4" type="video/mp4" data-wf-ignore="true"/>
-          </video>
+      ref={videoRef}
+      playsInline
+      loop
+      muted
+      controls={false}
+      width="100%"
+      height="100%"
+      style={{
+        position: "absolute",
+        top: 0,
+        left: 0,
+        background: 'transparent'
+      }}
+      data-wf-ignore="true" data-object-fit="cover"
+    >
+      <source src="/trpbanner.mp4" type="video/mp4" data-wf-ignore="true"/>
+    </video>
         </div>
       </Container>
       {/* <div id="carouselExampleControls" className="carousel slide" data-ride="carousel" style={{ marginTop: '-130px' }}>
