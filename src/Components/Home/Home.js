@@ -23,7 +23,7 @@ const GET_ALL_GALLERY = gql`
 
 function Home() {
 
-  const video = document.getElementById('trp'); // Replace 'yourVideoId' with the actual ID of your video element
+  const video = ("trp") // Replace 'yourVideoId' with the actual ID of your video element
 
   // Wait for a brief moment and then attempt to autoplay
   setTimeout(() => {
@@ -164,7 +164,7 @@ You can contact us here for any suggestion or query!`}
           }}
         >
           <video
-          id="trp"
+          id= {video}
             playsInline
             loop
             muted
